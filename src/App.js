@@ -43,10 +43,6 @@ export default class App extends React.Component {
           <h3 className="text-blue-400 text-3xl pb-2">La solution Yourcenardienne à la communication entre professeurs et élèves.</h3>
           <h3 className="text-red-600 text-2xl">Rejoignez les <span class="text-yellow-500">{this.state.users[0]}</span> professeurs et les <span class="text-yellow-500">{this.state.users[1]}</span> élèves déjà inscrits !</h3>
       </div>
-      
-      <div style={{'backgroundColor': '#424242'}} class='h-'>
-        
-      </div>
     </div>
   );
   }
