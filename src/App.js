@@ -21,7 +21,6 @@ export default class App extends React.Component {
         <div className="flex pt-4">
           <div>
             <img
-              alt="logo"
               className="w-25 h-24 pr-4"
               src='https://app-yourlendar.fr/favicon.png' 
               alt='Yourlendar'>
