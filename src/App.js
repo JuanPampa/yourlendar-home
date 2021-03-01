@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+export default class App extends React.Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: []
+    }
+  }
+
+  componentDidMount() {
+    fetch("http://yourlendar-app.herokuapp.com/api/users/external", {mode: 'no-cors'}).then((res) => {return res.text()}).then((data) => this.setState(JSON.parse(data)));
+  }
+
+  render() {
+    return (
+    <div style={{backgroundColor: "#212121"}} className="flex-block h-screen w-screen">
+
+      <div className="flex justify-center align-center mb-24">
+
+        <div className="flex pt-4">
+          <div>
+            <img
+              className="w-25 h-24 pr-4"
+              src='https://app-yourlendar.fr/favicon.png' 
+              alt='Yourlendar'>
+            </img>
+          </div>
+
+        <div>
+            <h1 className="text-blue-400 text-5xl pb-2">Yourlendar</h1>
+            <a href="http://app.yourlendar.fr"><button class="button button--traditional mb-4">Accéder à l'application</button></a>
+          </div>
+        </div>
+          
+      </div>
+
+      <div class='m-auto text-center pt-10 pb-10 bg-gray-700'>
+          <img
+            className="m-auto pb-5"
+            src="http://www.lyc-yourcenar-morangis.ac-versailles.fr/wp-content/uploads/sites/110/2017/05/diapo1-1-700x300.jpg">
+          </img>
+          <h3 className="text-blue-400 text-3xl pb-2">La solution Yourcenardienne à la communication entre professeurs et élèves.</h3>
+          <h3 className="text-red-600 text-2xl">Rejoignez les <span class="text-yellow-500">{this.state.users[0]}</span> professeurs et les <span class="text-yellow-500">{this.state.users[1]}</span> élèves déjà inscrits !</h3>
+      </div>
+      
+      <div style={{'backgroundColor': '#424242'}} class='h-'>
+        
+      </div>
     </div>
   );
+  }
 }
-
-export default App;
