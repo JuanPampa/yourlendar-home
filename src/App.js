@@ -21,6 +21,7 @@ export default class App extends React.Component {
         <div className="flex pt-4">
           <div>
             <img
+              alt="logo"
               className="w-25 h-24 pr-4"
               src='https://app-yourlendar.fr/favicon.png' 
               alt='Yourlendar'>
@@ -37,6 +38,7 @@ export default class App extends React.Component {
 
       <div class='m-auto text-center pt-10 pb-10 bg-gray-700'>
           <img
+            alt="yourcenar"
             className="m-auto pb-5"
             src="http://www.lyc-yourcenar-morangis.ac-versailles.fr/wp-content/uploads/sites/110/2017/05/diapo1-1-700x300.jpg">
           </img>
