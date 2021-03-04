@@ -22,7 +22,7 @@ export default class App extends React.Component {
           <div>
             <img
               className="w-25 h-24 pr-4"
-              src='http://dashboard.yourlendar.fr/favicon.png' 
+              src='../favicon.png' 
               alt='Yourlendar'>
             </img>
           </div>
