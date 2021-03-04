@@ -1,17 +1,6 @@
 import React from 'react';
 export default class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      users: []
-    }
-  }
-
-  componentDidMount() {
-    fetch("http://dashboard.yourlendar.fr/api/users/external").then((res) => {return res.text()}).then((data) => this.setState(JSON.parse(data)));
-  }
-
   render() {
     return (
     <div style={{backgroundColor: "#212121"}} className="flex-block h-screen w-screen">
@@ -22,7 +11,7 @@ export default class App extends React.Component {
           <div>
             <img
               className="w-25 h-24 pr-4"
-              src='../favicon.png' 
+              src='../assets/favicon.png' 
               alt='Yourlendar'>
             </img>
           </div>
@@ -39,7 +28,7 @@ export default class App extends React.Component {
           <img
             alt="yourcenar"
             className="m-auto pb-5"
-            src="http://www.lyc-yourcenar-morangis.ac-versailles.fr/wp-content/uploads/sites/110/2017/05/diapo1-1-700x300.jpg">
+            src="../assets/yourcenar.jpg">
           </img>
           <h3 className="text-blue-400 text-3xl pb-2">La solution <span className="text-indigo-300 hover:text-yellow-500">"Made In Yourcenar"</span> à la communication entre professeurs et élèves !</h3>
       </div>
