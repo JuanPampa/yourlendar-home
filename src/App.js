@@ -9,7 +9,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://yourlendar-app.herokuapp.com/api/users/external", {mode: 'no-cors'}).then((res) => {return res.text()}).then((data) => this.setState(JSON.parse(data)));
+    fetch("http://dashboard.yourlendar.fr/api/users/external").then((res) => {return res.text()}).then((data) => this.setState(JSON.parse(data)));
   }
 
   render() {
@@ -22,27 +22,27 @@ export default class App extends React.Component {
           <div>
             <img
               className="w-25 h-24 pr-4"
-              src='https://app-yourlendar.fr/favicon.png' 
+              src='http://dashboard.yourlendar.fr/favicon.png' 
               alt='Yourlendar'>
             </img>
           </div>
 
         <div>
             <h1 className="text-blue-400 text-5xl pb-2">Yourlendar</h1>
-            <a href="http://app.yourlendar.fr"><button class="button button--traditional mb-4">Accéder à l'application</button></a>
+            <a href="http://dashboard.yourlendar.fr"><button className="button button--traditional mb-4">Accéder à l'application</button></a>
           </div>
         </div>
           
       </div>
 
-      <div class='m-auto text-center pt-10 pb-10 bg-gray-700'>
+      <div className='m-auto text-center pt-10 pb-10 bg-gray-700'>
           <img
             alt="yourcenar"
             className="m-auto pb-5"
             src="http://www.lyc-yourcenar-morangis.ac-versailles.fr/wp-content/uploads/sites/110/2017/05/diapo1-1-700x300.jpg">
           </img>
-          <h3 className="text-blue-400 text-3xl pb-2">La solution Yourcenardienne à la communication entre professeurs et élèves.</h3>
-          <h3 className="text-red-600 text-2xl">Rejoignez les <span class="text-yellow-500">{this.state.users[0]}</span> professeurs et les <span class="text-yellow-500">{this.state.users[1]}</span> élèves déjà inscrits !</h3>
+          <h3 className="text-blue-400 text-3xl pb-2">La solution <span className="text-indigo-300 hover:text-yellow-500">"Made In Yourcenar"</span> à la communication entre professeurs et élèves !</h3>
+          <h3 className="text-red-600 text-2xl">Rejoignez les <span className="text-yellow-500">{this.state.users[0]}</span> professeurs et les <span className="text-yellow-500">{this.state.users[1]}</span> élèves déjà inscrits !</h3>
       </div>
     </div>
   );
