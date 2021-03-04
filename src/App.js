@@ -42,7 +42,6 @@ export default class App extends React.Component {
             src="http://www.lyc-yourcenar-morangis.ac-versailles.fr/wp-content/uploads/sites/110/2017/05/diapo1-1-700x300.jpg">
           </img>
           <h3 className="text-blue-400 text-3xl pb-2">La solution <span className="text-indigo-300 hover:text-yellow-500">"Made In Yourcenar"</span> à la communication entre professeurs et élèves !</h3>
-          <h3 className="text-red-600 text-2xl">Rejoignez les <span className="text-yellow-500">{this.state.users[0]}</span> professeurs et les <span className="text-yellow-500">{this.state.users[1]}</span> élèves déjà inscrits !</h3>
       </div>
     </div>
   );
