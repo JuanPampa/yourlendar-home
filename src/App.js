@@ -1,5 +1,11 @@
 import React from 'react';
+import yourlendarLogo from "./assets/favicon.png";
+import yourcenarImage from "./assets/yourcenar.jpg";
 export default class App extends React.Component {
+
+  redirect() {
+    window.location.href = "http://dashboard.yourlendar.fr"
+  };
 
   render() {
     return (
@@ -11,24 +17,24 @@ export default class App extends React.Component {
           <div>
             <img
               className="w-25 h-24 pr-4"
-              src='../assets/favicon.png' 
+              src={yourlendarLogo}
               alt='Yourlendar'>
             </img>
           </div>
 
         <div>
             <h1 className="text-blue-400 text-5xl pb-2">Yourlendar</h1>
-            <a href="http://dashboard.yourlendar.fr"><button className="button button--traditional mb-4">Accéder à l'application</button></a>
+            <button onClick={this.redirect} className="button button--traditional mb-4">Accéder à l'application</button>
           </div>
         </div>
           
       </div>
 
-      <div className='m-auto text-center pt-10 pb-10 bg-gray-700'>
+      <div className='m-auto text-center pt-10 pb-5 bg-gray-700'>
           <img
             alt="yourcenar"
             className="m-auto pb-5"
-            src="../assets/yourcenar.jpg">
+            src={yourcenarImage}>
           </img>
           <h3 className="text-blue-400 text-3xl pb-2">La solution <span className="text-indigo-300 hover:text-yellow-500">"Made In Yourcenar"</span> à la communication entre professeurs et élèves !</h3>
       </div>
